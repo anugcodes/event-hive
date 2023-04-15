@@ -1,11 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Grommet } from "grommet";
 import HomeLayout from "./routes/home-layout";
 
 function App() {
   return (
-    // <div className="App">
-    <Grommet full>
+    <div className="App">
       <BrowserRouter>
         <Routes>
           <Route element={<HomeLayout />}>
@@ -13,8 +11,7 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
-    </Grommet>
-    // </div>
+    </div>
   );
 }
 
