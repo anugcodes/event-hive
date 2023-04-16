@@ -6,13 +6,12 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route element={<HomeLayout />}>
-            <Route path="/" element={<div>home</div>} />
+          <Route path='/' element={<HomeLayout />}>
+            <Route index element={<div>home</div>} />
           </Route>
         </Routes>
       </BrowserRouter>
     </div>
   );
 }
-
 export default App;
