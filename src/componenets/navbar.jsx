@@ -1,17 +1,22 @@
 import { Link } from "react-router-dom";
-
+import { BiBell, BiMenu, BiSearch } from "react-icons/bi";
 export function PageNav() {
   return (
-    <div className="navbar bg-slate-500 sticky top-0 z-10 px-4">
-      <div className="flex-1">
+    <div className="navbar bg-base-100 sticky top-0 w-9/12 mx-auto">
+      <div className="navbar-start">
         <Link to={"/"} className=" normal-case text-xl">
-          EventHive
+         EventHive 
         </Link>
       </div>
-      <div className="flex-none space-x-4">
-        <div className="btn btn-ghost">
-          <Link to={"#events"}>Events</Link>
-        </div>
+      <div className="navbar-center"></div>
+      <div className="navbar-end space-x-2">
+        <button className="btn btn-ghost btn-circle">
+          <div className="indicator">
+            <BiBell className="text-2xl font-bold" />
+            <span className="badge badge-xs badge-primary indicator-item"></span>
+          </div>
+        </button>
+        <Link to={"#events"} className="btn btn-ghost">Events</Link>
         <div className="dropdown dropdown-end">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
             <div className="w-10 rounded-full">

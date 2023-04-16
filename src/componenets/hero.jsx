@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function PageHero() {
   return (
-    <div className="hero">
+    <div className="hero min-h-[60vh] w-9/12 mx-auto">
       <div className="hero-content flex-col lg:flex-row">
         <img
           src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg"
