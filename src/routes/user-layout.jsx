@@ -32,7 +32,7 @@ function ProfileNav() {
             className="tooltip tooltip-bottom"
             data-tip="participate in events"
           >
-            <Link to={"#"}>
+            <Link to={"/fests"}>
               <button className="btn btn-sm md:btn-md btn-secondary normal-case">
                 Participate
               </button>
