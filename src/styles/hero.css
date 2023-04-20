@@ -1,0 +1,46 @@
+.hero-heading {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 800;
+
+  text-align: center;
+  letter-spacing: -0.04em;
+
+  background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  position: relative;
+}
+
+.landing-container {
+  position: relative;
+}
+.top-hive {
+  position: absolute;
+  right: -40%;
+  top: -20%;
+  opacity: 0.2;
+  z-index: -1;
+  transform: rotate(-152.14deg) scale(0.8);
+}
+
+.bottom-hive {
+  position: absolute;
+  position: absolute;
+  left: -50%;
+  bottom: -10%;
+  opacity: 0.2;
+  z-index: -1;
+  transform: rotate(12deg) scale(0.8);
+}
+
+@media screen and (max-width: 700px) {
+  .bottom-hive {
+    bottom: 10%;
+  }
+  .top-hive {
+    top: 0%;
+  }
+}

@@ -76,66 +76,8 @@ export function Register() {
   };
   return (
     <>
-      <input type="checkbox" id="RegisterModal" className="modal-toggle" />
-      <div className="modal">
-        <div className="modal-box relative max-w-sm">
-          <label
-            htmlFor="RegisterModal"
-            className="btn btn-sm btn-circle absolute right-2 top-2"
-          >
-            ✕
-          </label>
-          <div className="mx-auto">
-            <h2 className="text-xl font-light">Register Yourself</h2>
-            <form onSubmit={(e) => handleFormSubmit(e)}>
-              <InputGrp
-                label={"Full Name"}
-                placeholder="e.g John Dow"
-                id="name"
-                name="name"
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                error={formstate.errors.name}
-              />
-              <InputGrp
-                label={"Email Address"}
-                placeholder="e.g example@mail.com"
-                id="email"
-                name="email"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                error={formstate.errors.email}
-              />
-              <InputGrp
-                label={"Create Password"}
-                placeholder="e.g password"
-                id="password"
-                name="password"
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                error={formstate.errors.password}
-              />
-              <button
-                className="btn btn-secondary w-full normal-case mt-2 "
-                disabled={formstate.submitting}
-              >
-                Sign Up
-              </button>
-            </form>
-            <div className="divider">OR</div>
-            <button
-              className="btn btn-accent w-full normal-case"
-              onClick={() => handleGoogleLogin()}
-              disabled={formstate.submitting}
-            >
-              Continue with Google
-            </button>
-          </div>
-        </div>
-      </div>
+     
+      
     </>
   );
 }

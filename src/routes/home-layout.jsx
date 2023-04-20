@@ -3,21 +3,20 @@ import PageHero from "../componenets/hero";
 import { PageNav } from "../componenets/navbar";
 import PageFooter from "../componenets/footer";
 import { Link, Outlet } from "react-router-dom";
-import { Login } from "../componenets/auth/login";
-import {Register} from "../componenets/auth/register"
+import "../styles/hero.css";
+import Hive from "../assets/hive.svg";
 export default function HomeLayout() {
   return (
     <>
-      <PageNav />
-      <PageHero />
-      <Login />
-      <Register />
+      <div className="h-screen landing-container">
+        <img src={Hive} alt="" className="top-hive" />
+        <PageNav />
+        <PageHero />
+        <img src={Hive} alt="" className="bottom-hive" />
+      </div>
       <Outlet />
+      <img src={Hive} alt="" className="bottom-hive" />
       <PageFooter />
     </>
   );
 }
-
-
-
-
