@@ -16,7 +16,7 @@ export function PageNav() {
     <>
       <header aria-label="Site Header">
         <div className="mx-auto flex h-20 max-w-screen-xl items-center gap-8 px-4 sm:px-8 backdrop-blur-sm">
-          <Link className="block text-teal-600" href="/">
+          <Link className="block text-teal-600" to="/">
             <span className="sr-only">Home</span>
             <img src={Logo} alt="Event Hive" className="h-20 " />
           </Link>

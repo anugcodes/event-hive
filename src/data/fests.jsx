@@ -5,20 +5,7 @@ export const fests = {
       name: "AXIS 21",
       about:
         "AXIS is the annual technical festival of VNIT, consisting of a gamut of events, guest lectures, workshops, and exhibitions that provide a myriad of opportunities for students to enlighten their bright inquisitive minds. Starting in the year 2001, AXIS has transformed into Central India’s largest technical festival and is now counted to be amongst the top in the nation. It has since, been strong on its pillars of innovation, creativity, and teamwork. An array of events on the different categories of technical, design, recreation, and management, provide the students with an apt atmosphere to gain more knowledge and compete with the best from all over the nation. AXIS has been host to eminent personalities such as Dr. APJ Abdul Kalam, Dr. A S Kiran Kumar, Nitin Gadkari, Sunita L. Williams, and Amish Tripathi and has a footfall of around 20,000 students. We aim to provide a platform for young engineers to convert theoretical knowledge to practical innovations",
-      events: [
-        {
-          "winter coding challenge": {
-            title:
-              "The Online Coding Contest\nSolve the given problem statement and win exciting prizes",
-            date: "15 January 2021",
-            time: "07:00 pm",
-            duration: "2 hours",
-            prizes: "20000",
-            entryFee: "100 per person",
-            sponsors: ["coding ninjas"],
-          },
-        },
-      ],
+      events: ["winter coding challenge"],
       sponsors: ["CODING NINJAS"],
       category: "technical",
       mode: "Venue/Offline Mode",

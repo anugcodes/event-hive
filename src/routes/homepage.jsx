@@ -1,6 +1,10 @@
 import React from "react";
 import "../index.css";
 import FeatureImg from "../assets/feature.svg";
+import { events } from "../data/events";
+import { fests } from "../data/fests";
+import { Link } from "react-router-dom";
+
 export default function Homepage() {
   return (
     <>
@@ -167,71 +171,60 @@ function LatestEventsSection() {
     <>
       <section>
         <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className=" max-w-lg  my-6">
-            <span className="text-3xl font-bold sm:text-4xl hero-heading">
-              A lot is happening,
-            </span>
-            <h2 className="text-3xl font-bold sm:text-4xl hero-heading">
-              You ready for it.
-            </h2>
-          </div>
-
           <div className="[column-fill:_balance] sm:columns-2 sm:gap-6 lg:columns-3 lg:gap-8">
-            <div className="mb-8 sm:break-inside-avoid">
-              <blockquote className="rounded-xl bg-gray-50 p-6 shadow">
-                <p className="leading-relaxed text-gray-700">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio
-                  beatae incidunt perferendis soluta facilis voluptas dicta
-                  repudiandae quasi asperiores libero, exercitationem molestiae
-                  autem sapiente dolore nulla non consequatur. Eaque, dolores.
-                </p>
-              </blockquote>
-
-              <div className="mt-4 flex items-center gap-4">
-                <img
-                  alt="Woman"
-                  src="https://images.unsplash.com/photo-1603366445787-09714680cbf1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
-                  className="h-12 w-12 rounded-full object-cover"
+            {events.map((event,index) => {
+              return (
+                <EventPost
+                  key={index}
+                  name={event.title}
+                  date={event.date}
                 />
-
-                <div className="text-sm">
-                  <p className="font-medium">Gladis Lennon</p>
-                  <p className="mt-1">Head of SEO</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="mb-8 sm:break-inside-avoid">
-              <blockquote className="rounded-xl bg-gray-50 p-6 shadow">
-                <p className="leading-relaxed text-gray-700">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus
-                  doloribus eius aut unde, dolores accusantium!
-                </p>
-              </blockquote>
-
-              <div className="mt-4 flex items-center gap-4">
-                <img
-                  alt="Woman"
-                  src="https://images.unsplash.com/photo-1603366445787-09714680cbf1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=944&q=80"
-                  className="h-12 w-12 rounded-full object-cover"
-                />
-
-                <div className="text-sm">
-                  <p className="font-medium">Gladis Lennon</p>
-                  <p className="mt-1">Head of SEO</p>
-                </div>
-              </div>
-            </div>
-
-            <EventPost />
+              );
+            })}
           </div>
         </div>
       </section>
+      ;
     </>
   );
 }
 
-function EventPost() {
+function EventPost({ name, img, date }) {
+  return (
+    <article className="overflow-hidden rounded-lg border border-gray-100 shadow-sm sm:break-inside-avoid max-w-md mb-8">
+      <img
+        alt="Office"
+        src={
+          img
+            ? img
+            : "https://dexbot-backend.onrender.com/images/project_idea.png"
+        }
+        className="h-56 w-full object-cover"
+      />
+
+      <div className="p-4 sm:p-6">
+        <p className="text-gray-200 my-0.5">{date}</p>
+        <a href="#">
+          <h3 className="text-lg font-medium text-gray-200">{name}</h3>
+        </a>
+
+        <Link
+          to="/events"
+          className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600"
+        >
+          Find out more
+          <span
+            aria-hidden="true"
+            className="block transition-all group-hover:ms-0.5 rtl:rotate-180"
+          >
+            &rarr;
+          </span>
+        </Link>
+      </div>
+    </article>
+  );
+}
+function FestPost() {
   return (
     <article className="overflow-hidden rounded-lg border border-gray-100 shadow-sm sm:break-inside-avoid mb-8">
       <img
