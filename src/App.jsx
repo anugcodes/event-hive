@@ -6,6 +6,7 @@ import UserProfile from "./routes/user-profile";
 import UserLayout from "./routes/user-layout";
 import FestivalPage from "./routes/festspage";
 import ListLayout from "./routes/list-layout";
+import Homepage from "./routes/homepage";
 function App() {
   return (
     <div className="App">
@@ -13,7 +14,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<HomeLayout />}>
-              <Route index element={<div>home</div>} />
+              <Route index element={<Homepage />} />
             </Route>
             <Route element={<ListLayout />}>
               <Route path="/fests" element={<FestivalPage />} />
