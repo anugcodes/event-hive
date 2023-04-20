@@ -171,14 +171,18 @@ function LatestEventsSection() {
     <>
       <section>
         <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+          <div className=" max-w-lg  my-6">
+            <span className="text-3xl font-bold sm:text-4xl hero-heading">
+              A lot is happening,
+            </span>
+            <h2 className="text-3xl font-bold sm:text-4xl hero-heading">
+              You ready for it.
+            </h2>
+          </div>
           <div className="[column-fill:_balance] sm:columns-2 sm:gap-6 lg:columns-3 lg:gap-8">
-            {events.map((event,index) => {
+            {events.map((event, index) => {
               return (
-                <EventPost
-                  key={index}
-                  name={event.title}
-                  date={event.date}
-                />
+                <EventPost key={index} name={event.title} date={event.date} />
               );
             })}
           </div>
