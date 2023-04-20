@@ -3,12 +3,13 @@
 @tailwind utilities;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Manrope", sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
+  background-color: #040c18;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -17,3 +18,36 @@
   -webkit-text-size-adjust: 100%;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+
+.hero-heading {
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 800;
+
+  text-align: center;
+  letter-spacing: -0.04em;
+
+  background: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  position: relative;
+}
+.blur {
+  opacity: 0.3;
+  z-index: -1;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: #072d56;
+  filter: blur(282px);
+}
