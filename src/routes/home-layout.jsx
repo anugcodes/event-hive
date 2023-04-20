@@ -8,7 +8,7 @@ import Hive from "../assets/hive.svg";
 export default function HomeLayout() {
   return (
     <>
-      <div className="h-screen landing-container">
+      <div className="h-screen landing-container overflow-hidden">
         <img src={Hive} alt="" className="top-hive" />
         <PageNav />
         <PageHero />
