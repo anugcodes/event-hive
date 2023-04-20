@@ -1,24 +1,26 @@
-import { BsFacebook, BsTwitter, BsYoutube } from "react-icons/bs";
+import { BsFacebook, BsTwitter, BsInstagram } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import Logo from "../assets/logo.svg";
+import "../index.css";
 export default function PageFooter() {
   return (
     <>
-      <footer aria-label="Site Footer" className="bg-gray-100">
-        <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="flex justify-center text-teal-600">
-            <h2>EventHive</h2>
-          </div>
-
-          <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
-            consequuntur amet culpa cum itaque neque.
+      <footer aria-label="Site Footer" style={{position:"relative"}}>
+        <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8 ">
+          <div className="blur"></div>
+          <p className="mx-auto mt-6 max-w-md  leading-relaxed hero-heading text-4xl ">
+            Do you want to step in to the events before others
           </p>
+
+          <div className="flex justify-center text-teal-600">
+            <img src={Logo} alt="EventHive" />
+          </div>
 
           <nav aria-label="Footer Nav" className="mt-12">
             <ul className="flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
               <li>
                 <Link
-                  className="text-gray-700 transition hover:text-gray-700/75"
+                  className=" text-lg hover:text-slate-300 transition text-slate-500/75"
                   to="/events"
                 >
                   Events
@@ -27,7 +29,7 @@ export default function PageFooter() {
 
               <li>
                 <Link
-                  className="text-gray-700 transition hover:text-gray-700/75"
+                  className=" text-lg hover:text-slate-300 transition text-slate-500/75"
                   to="/fests"
                 >
                   Festivals
@@ -36,8 +38,9 @@ export default function PageFooter() {
 
               <li>
                 <Link
-                  className="text-gray-700 transition hover:text-gray-700/75"
+                  className=" text-lg hover:text-slate-300 transition text-slate-500/75"
                   to="#about"
+                  reloadDocument
                 >
                   About Us
                 </Link>
@@ -45,8 +48,9 @@ export default function PageFooter() {
 
               <li>
                 <Link
-                  className="text-gray-700 transition hover:text-gray-700/75"
+                  className=" text-lg hover:text-slate-300 transition text-slate-500/75"
                   to="#features"
+                  reloadDocument
                 >
                   Features
                 </Link>
@@ -60,7 +64,7 @@ export default function PageFooter() {
                 to="#"
                 rel="noreferrer"
                 target="_blank"
-                className="text-gray-700 transition hover:text-gray-700/75"
+                className="hover:text-gray-300 transition text-slate-500/75 text-2xl"
               >
                 <span className="sr-only">Facebook</span>
                 <BsFacebook />
@@ -71,7 +75,7 @@ export default function PageFooter() {
                 to="#"
                 rel="noreferrer"
                 target="_blank"
-                className="text-gray-700 transition hover:text-gray-700/75"
+                className="hover:text-gray-300 transition text-slate-500/75 text-2xl"
               >
                 <span className="sr-only">Instagram</span>
                 <BsInstagram />
@@ -82,7 +86,7 @@ export default function PageFooter() {
                 to="#"
                 rel="noreferrer"
                 target="_blank"
-                className="text-gray-700 transition hover:text-gray-700/75"
+                className="hover:text-gray-300 transition text-slate-500/75 text-2xl"
               >
                 <span className="sr-only">Twitter</span>
                 <BsTwitter />
