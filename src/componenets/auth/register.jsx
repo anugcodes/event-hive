@@ -15,6 +15,11 @@ export function Register() {
   });
 
   let nextRoute = useRef("/user");
+  useEffect(() => {
+    if (currentUser) {
+      navigate(-1, { replace: true });
+    }
+  },[]);
 
   const validateInputs = () => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -35,11 +40,11 @@ export function Register() {
     return errors;
   };
 
-  const clearform = () =>{
+  const clearform = () => {
     setEmail("");
     setPassword("");
-    setformstate({...formstate,errors:{}});
-  }
+    setformstate({ ...formstate, errors: {} });
+  };
 
   const handleFormSubmit = async (e) => {
     e.preventDefault();
@@ -76,8 +81,67 @@ export function Register() {
   };
   return (
     <>
-     
-      
+      <div className="mx-auto max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8 h-screen">
+        <div className="mx-auto max-w-sm">
+          <h1 className="text-center text-2xl font-bold text-indigo-600 sm:text-3xl">
+            Get started today
+          </h1>
+
+          <form
+            action=""
+            className="mb-0 mt-6 space-y-4 rounded-lg p-4 shadow-lg sm:p-6 lg:p-8"
+            onSubmit={(e) => handleFormSubmit(e)}
+          >
+            <p className="text-center text-lg font-medium">Register yourself</p>
+
+            <InputGrp
+              id="name"
+              placeholder="Full Name"
+              error={formstate.errors.name}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <InputGrp
+              id="email"
+              placeholder="Email"
+              error={formstate.errors.email}
+              value={email}
+              type="text"
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            <InputGrp
+              id="password"
+              type="password"
+              placeholder="Password"
+              error={formstate.errors.password}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+
+            <button
+              type="submit"
+              className="block w-full rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white"
+            >
+              Sign Up
+            </button>
+            <div className="my-3 text-center">OR</div>
+            <button
+              className="block w-full rounded-lg bg-indigo-600 px-5 py-3 text-sm font-medium text-white"
+              onClick={() => handleGoogleLogin()}
+              type="button"
+            >
+              Continue with Google
+            </button>
+
+            <p className="text-center text-sm text-gray-500">
+              Already have an account
+              <Link className="underline mx-2" to="/auth/login">
+                Sign In
+              </Link>
+            </p>
+          </form>
+        </div>
+      </div>
     </>
   );
 }

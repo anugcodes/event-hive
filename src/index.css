@@ -22,7 +22,6 @@ body {
   overflow-x: hidden;
 }
 
-
 .hero-heading {
   font-family: "Manrope";
   font-style: normal;
@@ -50,4 +49,12 @@ body {
   width: 100%;
   background: #072d56;
   filter: blur(282px);
+}
+.footer-hive {
+  position: absolute;
+  left: -30%;
+  bottom: -50%;
+  opacity: 0.2;
+  z-index: -1;
+  transform: rotate(12deg) scale(0.8);
 }

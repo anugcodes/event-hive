@@ -26,7 +26,7 @@ export function PageNav() {
               <ul className="flex items-center gap-6 text-sm">
                 <li>
                   <Link
-                    className="text-gray-500 transition hover:text-gray-500/75"
+                    className="text-gray-500 transition hover:text-gray-200/80"
                     to="#about"
                     reloadDocument
                   >
@@ -35,16 +35,16 @@ export function PageNav() {
                 </li>
                 <li>
                   <Link
-                    className="text-gray-500 transition hover:text-gray-500/75"
+                    className="text-gray-500 transition hover:text-gray-200/80"
                     to="#features"
                     reloadDocument
                   >
-                   Features
+                    Features
                   </Link>
                 </li>
                 <li>
                   <Link
-                    className="text-gray-500 transition hover:text-gray-500/75"
+                    className="text-gray-500 transition hover:text-gray-200/80"
                     to="/fests"
                   >
                     Events
@@ -52,7 +52,7 @@ export function PageNav() {
                 </li>
                 <li>
                   <Link
-                    className="text-gray-500 transition hover:text-gray-500/75"
+                    className="text-gray-500 transition hover:text-gray-200/80"
                     to="/events"
                   >
                     Festivals
@@ -62,6 +62,24 @@ export function PageNav() {
             </nav>
 
             <div className="flex items-center gap-4">
+              {currentUser && (
+                <div>
+                  <Link
+                    to={"/user"}
+                    className="text-gray-500 transition hover:text-gray-200/80"
+                  >
+                    profile
+                  </Link>
+                </div>
+              )}
+              {!currentUser && (
+                <Link
+                  to={"/auth/login"}
+                  className="text-gray-500 transition hover:text-gray-200/80 hover:border-gray-200/80 border border-transparent px-4 py-2 rounded-lg"
+                >
+                  Login
+                </Link>
+              )}
               <button className="block rounded bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden">
                 <span className="sr-only">Toggle menu</span>
                 <BiMenu />

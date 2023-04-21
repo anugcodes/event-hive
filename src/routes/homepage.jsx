@@ -196,15 +196,7 @@ function LatestEventsSection() {
 function EventPost({ name, img, date }) {
   return (
     <article className="overflow-hidden rounded-lg border border-gray-100 shadow-sm sm:break-inside-avoid max-w-md mb-8">
-      <img
-        alt="Office"
-        src={
-          img
-            ? img
-            : "https://dexbot-backend.onrender.com/images/project_idea.png"
-        }
-        className="h-56 w-full object-cover"
-      />
+      {img && <img alt="Office" src={img} className="h-56 w-full object-cover" />}
 
       <div className="p-4 sm:p-6">
         <p className="text-gray-200 my-0.5">{date}</p>
@@ -224,6 +216,7 @@ function EventPost({ name, img, date }) {
             &rarr;
           </span>
         </Link>
+        
       </div>
     </article>
   );
