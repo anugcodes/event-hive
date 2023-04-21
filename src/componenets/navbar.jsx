@@ -47,7 +47,7 @@ export function PageNav() {
                     className="text-gray-500 transition hover:text-gray-200/80"
                     to="/fests"
                   >
-                    Events
+                    Festivals
                   </Link>
                 </li>
                 <li>
@@ -55,7 +55,7 @@ export function PageNav() {
                     className="text-gray-500 transition hover:text-gray-200/80"
                     to="/events"
                   >
-                    Festivals
+                    Events
                   </Link>
                 </li>
               </ul>
@@ -68,7 +68,7 @@ export function PageNav() {
                     to={"/user"}
                     className="text-gray-500 transition hover:text-gray-200/80"
                   >
-                    profile
+                    Profile
                   </Link>
                 </div>
               )}

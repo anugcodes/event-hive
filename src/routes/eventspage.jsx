@@ -1,5 +1,6 @@
 import React from "react";
 import { events } from "../data/events";
+import { Link } from "react-router-dom";
 
 export default function EventsPage() {
   return (
@@ -26,9 +27,9 @@ export default function EventsPage() {
             </thead>
 
             <tbody className="divide-y divide-gray-200">
-              {events.map((event) => {
+              {events.map((event,index) => {
                 return (
-                  <tr>
+                  <tr key={index}>
                     <td className="whitespace-nowrap px-4 py-2 font-medium text-gray-300">
                       <div className=""> {event.title}</div>
                     </td>
@@ -39,12 +40,12 @@ export default function EventsPage() {
                     <div className="max-w-sm h-20">{event.venue}</div>
                   </td> */}
                     <td className="whitespace-nowrap px-4 py-2">
-                      <a
-                        href="#"
+                      <Link
+                        to={event.contact.website}
                         className="inline-block rounded bg-indigo-600 px-4 py-2 text-xs font-medium text-white hover:bg-indigo-700"
                       >
                         View
-                      </a>
+                      </Link>
                     </td>
                   </tr>
                 );

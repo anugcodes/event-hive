@@ -198,8 +198,8 @@ function EventPost({ name, img, date ,link}) {
       {img && <img alt="Office" src={img} className="h-56 w-full object-cover" />}
 
       <div className="p-4 sm:p-6">
-        <p className="text-gray-200 my-0.5">{date}</p>
-        <Link to="/events">
+        <p className="text-slate-400 my-0.5 text-sm">{date}</p>
+        <Link to={link? link: '/events'}>
           <h3 className="text-lg font-medium text-gray-200">{name}</h3>
         </Link>
 
