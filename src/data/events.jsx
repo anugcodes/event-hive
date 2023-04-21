@@ -10,7 +10,7 @@ export const events = [
         speaker:"Dr. Vivek Bindra",
         contact: {
             number: "+91-859-120-5815",
-            website: "whizind.org/ignite",
+            website: "https://whizind.org/ignite",
             email:"contact@whizindmultitech.com",
         },
     },
@@ -22,6 +22,7 @@ export const events = [
         contact:{
             number:"+917550049628",
             email:"mk5728@srmist.edu.in",
+            website:"https://www.texus.io/#events",
         },
         venue:"SRM Institute of Science and Technology Ramapuram Campus, Chennai",
     },

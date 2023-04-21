@@ -25,7 +25,7 @@ function ProfileNav() {
   return (
     <header aria-label="Site Header">
       <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
-        <Link className="block text-teal-600" href="/">
+        <Link className="block text-teal-600" to="/">
           <span className="sr-only">Home</span>
           {/* <h2>EventHive</h2> */}
           <img src={Logo}  className="h-16"/>

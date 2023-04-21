@@ -16,8 +16,8 @@ export default function UserProfile() {
             {currentUser.displayName || "Current User"}
           </h3>
           {/* <h5>{ currentUser.email || 'user\'s email'}</h5> */}
-          <h5 className="text-lg font-light font-mono">username</h5>
-          <button className="btn btn-outline btn-sm normal-case w-full max-w-[15rem] ">
+          {/* <h5 className="text-lg font-light font-mono">username</h5> */}
+          <button className="border rounded w-full max-w-[15rem] my-2">
             Edit Profile
           </button>
 
@@ -25,13 +25,13 @@ export default function UserProfile() {
             <div className="flex space-x-2 items-center">
               <BiMap />
               <span className="font-sans">
-                {currentUser.location || "User's location"}
+                {currentUser.location || "Bhubaneswar"}
               </span>
             </div>
             <div className="flex space-x-2 items-center">
               <BiBookBookmark />
               <span className="font-sans">
-                {currentUser.college || "User's college"}
+                {currentUser.college || "Silicon Institute of Technology"}
               </span>
             </div>
           </div>
@@ -48,15 +48,26 @@ export default function UserProfile() {
               <span className="text-xl">Recent Events</span>
             </div>
           </div>
+          <div className="px-2">
+            <p className="text-center text-slate-600 my-4">
+              not attended any yet
+            </p>
+          </div>
         </div>
+
         <div className="min-h-[5rem]">
-          <div className="border-b border-slate-700 pb-1 min-h-">
+          <div className="border-b border-slate-700 pb-1">
             <div
-              className="tooltip tooltip-right text-xl"
-              data-tip="past participated events"
+              className="tooltip tooltip-right"
+              data-tip="recent participated events"
             >
-              Past Events
+              <span className="text-xl">Past Events</span>
             </div>
+          </div>
+          <div className="px-2">
+            <p className="text-center text-slate-600 my-4">
+              not attended any yet
+            </p>
           </div>
         </div>
       </div>

@@ -182,31 +182,31 @@ function LatestEventsSection() {
           <div className="[column-fill:_balance] sm:columns-2 sm:gap-6 lg:columns-3 lg:gap-8">
             {events.map((event, index) => {
               return (
-                <EventPost key={index} name={event.title} date={event.date} />
+                <EventPost key={index} name={event.title} date={event.date} link={event.contact.website}/>
               );
             })}
           </div>
         </div>
       </section>
-      ;
     </>
   );
 }
 
-function EventPost({ name, img, date }) {
+function EventPost({ name, img, date ,link}) {
   return (
     <article className="overflow-hidden rounded-lg border border-gray-100 shadow-sm sm:break-inside-avoid max-w-md mb-8">
       {img && <img alt="Office" src={img} className="h-56 w-full object-cover" />}
 
       <div className="p-4 sm:p-6">
         <p className="text-gray-200 my-0.5">{date}</p>
-        <a href="#">
+        <Link to="/events">
           <h3 className="text-lg font-medium text-gray-200">{name}</h3>
-        </a>
+        </Link>
 
         <Link
-          to="/events"
+          to={link? link : '/events'}
           className="group mt-4 inline-flex items-center gap-1 text-sm font-medium text-blue-600"
+          
         >
           Find out more
           <span
@@ -219,7 +219,7 @@ function EventPost({ name, img, date }) {
         
       </div>
     </article>
-  );
+  )
 }
 function FestPost() {
   return (
