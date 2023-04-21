@@ -8,6 +8,9 @@ import FestivalPage from "./routes/festspage";
 import ListLayout from "./routes/list-layout";
 import Homepage from "./routes/homepage";
 import EventsPage from "./routes/eventspage";
+import { Register } from "./componenets/auth/register";
+import { Login } from "./componenets/auth/login";
+import ErrorPage from "./routes/error-page";
 function App() {
   return (
     <div className="App">
@@ -33,6 +36,9 @@ function App() {
                 }
               />
             </Route>
+            <Route path="/auth/register" element={<Register />} />
+            <Route path="/auth/login" element={<Login />}  />
+            <Route path="*" element={<ErrorPage />} />
           </Routes>
         </BrowserRouter>
       </AuthContextProvider>
